@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Student Performance</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-brand">🎓 Performance Dashboard</div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/dashboard" class="active">Dashboard</a></li>
+                <li><a href="/search">Search Student</a></li>
+                <li><a href="/insights">Overall Insights</a></li>
+            </ul>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"></div>
+                </label>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div id="loader" class="loader"></div>
+        <h1 class="fade-in">Class Overview</h1>
+        
+        <div id="kpi-container" class="kpi-container"></div>
+        
+        <div class="card fade-in-delay">
+            <div class="card-header">
+                <h2>Quick Insights</h2>
+                <button id="download-report-btn" class="cta-button">Download At-Risk Report</button>
+            </div>
+            <div id="student-lists" class="student-lists"></div>
+        </div>
+
+        <div class="charts-grid">
+            <div class="card fade-in-delay-2">
+                <h2>Average Attendance by Subject</h2>
+                <canvas id="subjectAttendanceChart"></canvas>
+            </div>
+            <div class="card fade-in-delay-3">
+                <h2>Average GPA by Subject</h2>
+                <canvas id="subjectGpaChart"></canvas>
+            </div>
+        </div>
+    </main>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
