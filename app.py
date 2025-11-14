@@ -5,7 +5,7 @@ import pandas as pd
 import sqlite3
 
 # --- Initialize the Flask App ---
-app = Flask(__name__)
+app = Flask(__name__, template_folder='.')
 
 # --- Define Routes ---
 
