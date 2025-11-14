@@ -1,8 +1,15 @@
 # app.py
+import os  # <-- Add this line
 
-from flask import Flask, render_template, jsonify
-import pandas as pd
+# --- Add these 3 lines at the top ---
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+os.chdir(BASE_DIR)
+# --- End of fix ---
+
+import pickle
 import sqlite3
+import pandas as pd
+from flask import Flask, render_template, jsonify
 
 # --- Initialize the Flask App ---
 app = Flask(__name__, template_folder='.', static_folder='.', static_url_path='')
