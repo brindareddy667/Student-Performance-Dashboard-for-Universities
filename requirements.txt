@@ -3,3 +3,4 @@ xgboost
 matplotlib
 seaborn
 Flask
+gunicorn
